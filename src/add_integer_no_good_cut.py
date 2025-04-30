@@ -15,7 +15,7 @@ def add_INGC(self):
     a = []        
     for i in range(len(self.s_sol)):
         a.append(self.s_sol[i])
-    print(a)        
+    #print(a)        
     #print(coeff_list)
     
     #print(self.s_names[0])

@@ -6,6 +6,7 @@ from model_builder import Node_Builder
 from node_solver import Node_Solver
 from result_analyzer import Result_Analyzer
 import global_vars
+import parameter_settings
 
 
 
@@ -31,15 +32,25 @@ instance_name = sys.argv[1]
 global_vars.matrix_spectrum = 1000
 
 
-if sys.argv[2] == "True":
-    global_vars.use_opt_cuts = True
+if len(sys.argv) >= 3: # else: take settings from parameter_settings.py
+    if sys.argv[2] == "KKT":
+        global_vars.use_HPR = False
+    elif sys.argv[2] == "HPR":
+        global_vars.use_HPR = True  
+    else:
+        raise Exception("Invalid second argument. Should be 'KKT' or 'HPR'.")
 else:
-    global_vars.use_opt_cuts = False
+    global_vars.use_HPR = parameter_settings.use_HPR
 
-if sys.argv[3] == "True":
-    global_vars.use_HPR = True
+if len(sys.argv) >= 4:
+    if sys.argv[3] == "use_opt_cut":
+        global_vars.use_opt_cuts = True
+    else:
+        global_vars.use_opt_cuts = False
 else:
-    global_vars.use_HPR = False    
+    global_vars.use_opt_cuts = parameter_settings.use_opt_cuts      
+
+
 
 
 
