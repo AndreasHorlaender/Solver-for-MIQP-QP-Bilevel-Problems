@@ -1,4 +1,4 @@
-To run the code, go to /src and type "python main.py {instance_name} {Parameter_1} {Parameter_2}" in the terminal where
+To run the code, go to /src and type "python main.py {instance_name} {Parameter_1} {Parameter_2}" in the terminal, where
 instance_name can be one of the names in /src/Filenames.txt.
 Parameter_1 can be "HPR", "KKT", or "" and controls if the KKT relaxation or the HPR is taken.
 Parameter_2 can be "use_opt_cut" or "" and controls if an optimality cut is used.
