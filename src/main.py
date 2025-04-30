@@ -51,11 +51,7 @@ else:
     global_vars.use_opt_cuts = parameter_settings.use_opt_cuts      
 
 
-
-
-
-
-result_file = "Results"
+result_file = parameter_settings.csv_file
 
 #if global_vars.use_opt_cuts == "True":
 #    result_file += "_with_opt_cuts"
