@@ -9,10 +9,10 @@ import global_vars
 
 
 
+'''
+instance_name = "bmilplib_110_4"
 
-instance_name = "miblp_20_15_50_0110_10_6"
-
-global_vars.matrix_spectrum = 1000
+global_vars.matrix_spectrum = 1001
 
 global_vars.use_opt_cuts = True
 global_vars.use_HPR = False
@@ -28,23 +28,23 @@ global_vars.use_alphaBB = False
 
 instance_name = sys.argv[1] 
 
-global_vars.matrix_spectrum = sys.argv[2]
+global_vars.matrix_spectrum = 1000
 
 
-if sys.argv[3] == "True":
+if sys.argv[2] == "True":
     global_vars.use_opt_cuts = True
 else:
     global_vars.use_opt_cuts = False
 
-if sys.argv[4] == "True":
+if sys.argv[3] == "True":
     global_vars.use_HPR = True
 else:
     global_vars.use_HPR = False    
 
-'''
 
 
-result_file = "ILL_TEST"
+
+result_file = "Results"
 
 #if global_vars.use_opt_cuts == "True":
 #    result_file += "_with_opt_cuts"
